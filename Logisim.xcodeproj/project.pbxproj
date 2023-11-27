@@ -8,27 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1B0506D52B1382C40022BCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0506D42B1382C40022BCCE /* AppDelegate.swift */; };
-		1B0506DB2B1382C40022BCCE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0506DA2B1382C40022BCCE /* Document.swift */; };
 		1B0506E02B1382C60022BCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506DF2B1382C60022BCCE /* Assets.xcassets */; };
 		1B0506E32B1382C60022BCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506E12B1382C60022BCCE /* LaunchScreen.storyboard */; };
 		1B0508292B14CB8A0022BCCE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0508282B14CB8A0022BCCE /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1B0507ED2B14BD1C0022BCCE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B0507E82B14BD1C0022BCCE /* Logisim-Element.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1B0506F52B14BC660022BCCE;
-			remoteInfo = "Logisim-Element";
-		};
-		1B0507EF2B14BD1C0022BCCE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B0507E82B14BD1C0022BCCE /* Logisim-Element.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1B0506FF2B14BC660022BCCE;
-			remoteInfo = "Logisim-ElementTests";
-		};
 		1B0507F62B14BD6B0022BCCE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B0507F12B14BD6A0022BCCE /* Logisim-Connector.xcodeproj */;
@@ -113,17 +98,42 @@
 			remoteGlobalIDString = 1B05076B2B14BCD80022BCCE;
 			remoteInfo = "Logisim-ToolTests";
 		};
+		1B0508702B14D7E80022BCCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B05086B2B14D7E80022BCCE /* Logisim-Element.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B0506F52B14BC660022BCCE;
+			remoteInfo = "Logisim-Element";
+		};
+		1B0508722B14D7E80022BCCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B05086B2B14D7E80022BCCE /* Logisim-Element.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B0506FF2B14BC660022BCCE;
+			remoteInfo = "Logisim-ElementTests";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B0508672B14D7890022BCCE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1B0506D12B1382C40022BCCE /* Logisim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logisim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0506D42B1382C40022BCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B0506DA2B1382C40022BCCE /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		1B0506DF2B1382C60022BCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B0506E22B1382C60022BCCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B0506E42B1382C60022BCCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B0506EA2B14209F0022BCCE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1B0507E82B14BD1C0022BCCE /* Logisim-Element.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Element.xcodeproj"; path = "Logisim-Element/Logisim-Element.xcodeproj"; sourceTree = "<group>"; };
 		1B0507F12B14BD6A0022BCCE /* Logisim-Connector.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Connector.xcodeproj"; path = "Logisim-Connector/Logisim-Connector.xcodeproj"; sourceTree = "<group>"; };
 		1B0507FA2B14BD850022BCCE /* Logisim-FileManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-FileManager.xcodeproj"; path = "Logisim-FileManager/Logisim-FileManager.xcodeproj"; sourceTree = "<group>"; };
 		1B0508032B14BD850022BCCE /* Logisim-Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Interface.xcodeproj"; path = "Logisim-Interface/Logisim-Interface.xcodeproj"; sourceTree = "<group>"; };
@@ -131,6 +141,8 @@
 		1B0508152B14BD860022BCCE /* Logisim-Grouping.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Grouping.xcodeproj"; path = "Logisim-Grouping/Logisim-Grouping.xcodeproj"; sourceTree = "<group>"; };
 		1B05081E2B14BD860022BCCE /* Logisim-Tool.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Tool.xcodeproj"; path = "Logisim-Tool/Logisim-Tool.xcodeproj"; sourceTree = "<group>"; };
 		1B0508282B14CB8A0022BCCE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1B05083B2B14D00A0022BCCE /* Logisim.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logisim.xctestplan; sourceTree = "<group>"; };
+		1B05086B2B14D7E80022BCCE /* Logisim-Element.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Element.xcodeproj"; path = "Logisim-Element/Logisim-Element.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,12 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				1B0506EA2B14209F0022BCCE /* README.md */,
-				1B0506D42B1382C40022BCCE /* AppDelegate.swift */,
+				1B05083C2B14D01B0022BCCE /* Resources */,
 				1B0508282B14CB8A0022BCCE /* MainViewController.swift */,
-				1B0506DA2B1382C40022BCCE /* Document.swift */,
-				1B0506DF2B1382C60022BCCE /* Assets.xcassets */,
-				1B0506E12B1382C60022BCCE /* LaunchScreen.storyboard */,
-				1B0506E42B1382C60022BCCE /* Info.plist */,
 			);
 			path = Logisim;
 			sourceTree = "<group>";
@@ -178,24 +186,15 @@
 		1B0507E72B14BD1C0022BCCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B0507FA2B14BD850022BCCE /* Logisim-FileManager.xcodeproj */,
-				1B0508152B14BD860022BCCE /* Logisim-Grouping.xcodeproj */,
-				1B0508032B14BD850022BCCE /* Logisim-Interface.xcodeproj */,
+				1B05086B2B14D7E80022BCCE /* Logisim-Element.xcodeproj */,
+				1B0507F12B14BD6A0022BCCE /* Logisim-Connector.xcodeproj */,
 				1B05080C2B14BD850022BCCE /* Logisim-Logic.xcodeproj */,
 				1B05081E2B14BD860022BCCE /* Logisim-Tool.xcodeproj */,
-				1B0507F12B14BD6A0022BCCE /* Logisim-Connector.xcodeproj */,
-				1B0507E82B14BD1C0022BCCE /* Logisim-Element.xcodeproj */,
+				1B0507FA2B14BD850022BCCE /* Logisim-FileManager.xcodeproj */,
+				1B0508032B14BD850022BCCE /* Logisim-Interface.xcodeproj */,
+				1B0508152B14BD860022BCCE /* Logisim-Grouping.xcodeproj */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1B0507E92B14BD1C0022BCCE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1B0507EE2B14BD1C0022BCCE /* Logisim_Element.framework */,
-				1B0507F02B14BD1C0022BCCE /* Logisim-ElementTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1B0507F22B14BD6A0022BCCE /* Products */ = {
@@ -252,6 +251,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1B05083C2B14D01B0022BCCE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B0506D42B1382C40022BCCE /* AppDelegate.swift */,
+				1B0506DF2B1382C60022BCCE /* Assets.xcassets */,
+				1B0506E12B1382C60022BCCE /* LaunchScreen.storyboard */,
+				1B0506E42B1382C60022BCCE /* Info.plist */,
+				1B05083B2B14D00A0022BCCE /* Logisim.xctestplan */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1B05086C2B14D7E80022BCCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B0508712B14D7E80022BCCE /* Logisim_Element.framework */,
+				1B0508732B14D7E80022BCCE /* Logisim-ElementTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,6 +282,7 @@
 				1B0506CD2B1382C40022BCCE /* Sources */,
 				1B0506CE2B1382C40022BCCE /* Frameworks */,
 				1B0506CF2B1382C40022BCCE /* Resources */,
+				1B0508672B14D7890022BCCE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,8 +325,8 @@
 					ProjectRef = 1B0507F12B14BD6A0022BCCE /* Logisim-Connector.xcodeproj */;
 				},
 				{
-					ProductGroup = 1B0507E92B14BD1C0022BCCE /* Products */;
-					ProjectRef = 1B0507E82B14BD1C0022BCCE /* Logisim-Element.xcodeproj */;
+					ProductGroup = 1B05086C2B14D7E80022BCCE /* Products */;
+					ProjectRef = 1B05086B2B14D7E80022BCCE /* Logisim-Element.xcodeproj */;
 				},
 				{
 					ProductGroup = 1B0507FB2B14BD850022BCCE /* Products */;
@@ -336,20 +357,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1B0507EE2B14BD1C0022BCCE /* Logisim_Element.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Logisim_Element.framework;
-			remoteRef = 1B0507ED2B14BD1C0022BCCE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1B0507F02B14BD1C0022BCCE /* Logisim-ElementTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Logisim-ElementTests.xctest";
-			remoteRef = 1B0507EF2B14BD1C0022BCCE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		1B0507F72B14BD6B0022BCCE /* Logisim_Connector.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -434,6 +441,20 @@
 			remoteRef = 1B0508252B14BD860022BCCE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		1B0508712B14D7E80022BCCE /* Logisim_Element.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Logisim_Element.framework;
+			remoteRef = 1B0508702B14D7E80022BCCE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1B0508732B14D7E80022BCCE /* Logisim-ElementTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Logisim-ElementTests.xctest";
+			remoteRef = 1B0508722B14D7E80022BCCE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -454,7 +475,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B0508292B14CB8A0022BCCE /* MainViewController.swift in Sources */,
-				1B0506DB2B1382C40022BCCE /* Document.swift in Sources */,
 				1B0506D52B1382C40022BCCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -577,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -596,7 +616,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Logisim/Info.plist;
+				INFOPLIST_FILE = Logisim/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -610,9 +630,12 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanghwiback.Logisim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -625,7 +648,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Logisim/Info.plist;
+				INFOPLIST_FILE = Logisim/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -639,9 +662,12 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanghwiback.Logisim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

@@ -1,0 +1,71 @@
+{
+  "configurations" : [
+    {
+      "id" : "635334A6-25EA-4F43-9D83-590203DACCAC",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Logisim.xcodeproj",
+      "identifier" : "1B0506D02B1382C40022BCCE",
+      "name" : "Logisim"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Logisim-Connector\/Logisim-Connector.xcodeproj",
+        "identifier" : "1B0507222B14BCBA0022BCCE",
+        "name" : "Logisim-ConnectorTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Logisim-Element\/Logisim-Element.xcodeproj",
+        "identifier" : "1B0506FE2B14BC660022BCCE",
+        "name" : "Logisim-ElementTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Logisim-FileManager\/Logisim-FileManager.xcodeproj",
+        "identifier" : "1B05078E2B14BCEC0022BCCE",
+        "name" : "Logisim-FileManagerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Logisim-Grouping\/Logisim-Grouping.xcodeproj",
+        "identifier" : "1B0507D62B14BCFF0022BCCE",
+        "name" : "Logisim-GroupingTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Logisim-Interface\/Logisim-Interface.xcodeproj",
+        "identifier" : "1B0507B22B14BCF60022BCCE",
+        "name" : "Logisim-InterfaceTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Logisim-Logic\/Logisim-Logic.xcodeproj",
+        "identifier" : "1B0507462B14BCC90022BCCE",
+        "name" : "Logisim-LogicTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Logisim-Tool\/Logisim-Tool.xcodeproj",
+        "identifier" : "1B05076A2B14BCD80022BCCE",
+        "name" : "Logisim-ToolTests"
+      }
+    }
+  ],
+  "version" : 1
+}
