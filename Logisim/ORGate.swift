@@ -1,0 +1,29 @@
+//
+//  ORGate.swift
+//  Logisim
+//
+//  Created by 백상휘 on 2023/12/14.
+//
+
+import UIKit
+
+class ORGate: UIView {
+    override func draw(_ rect: CGRect) {
+        let path = UIBezierPath()
+        
+        path.move(to: CGPoint(x: 3, y: 3))
+        path.addLine(to: CGPoint(x: 63, y: 3))
+        path.addCurve(to: CGPoint(x: 63, y: 58),
+                      controlPoint1: CGPoint(x: 83, y: 13),
+                      controlPoint2: CGPoint(x: 83, y: 48))
+        path.addLine(to: CGPoint(x: 3, y: 58))
+        path.close()
+        
+        path.lineWidth = 3
+        path.lineCapStyle = .round
+        UIColor.black.setStroke()
+        path.stroke()
+        UIColor.white.setFill()
+        path.fill()
+    }
+}
