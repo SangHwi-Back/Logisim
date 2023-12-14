@@ -44,17 +44,38 @@ class MainViewController: UIViewController {
     @objc 
     func addANDGate(_ sender: Any) {
         let gate = AndGate(frame: .init(origin: .init(x: 100, y: 100), size: .init(width: 86, height: 61)))
-        gate.backgroundColor = .clear
+        gate.addGestureRecognizer(UIPanGestureRecognizer(
+            target: self,
+            action: #selector(gateGesturePan(_:))))
+        
         self.view.addSubview(gate)
     }
     
     @objc 
     func addORGate(_ sender: Any) {
         let gate = ORGate(frame: .init(origin: .init(x: 200, y: 200), size: .init(width: 86, height: 61)))
-        gate.backgroundColor = .clear
+        gate.addGestureRecognizer(UIPanGestureRecognizer(
+            target: self,
+            action: #selector(gateGesturePan(_:))))
+        
         self.view.addSubview(gate)
     }
     
+    @objc
+    func gateGesturePan(_ recognizer: UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: view)
+        let viewFrame = recognizer.view?.frame ?? .zero
+        
+        if (0..<view.frame.width) ~= (viewFrame.maxX + translation.x) {
+            recognizer.view?.center.x += translation.x
+        }
+        
+        if (0..<view.frame.height) ~= (viewFrame.maxY + translation.y) {
+            recognizer.view?.center.y += translation.y
+        }
+        
+        recognizer.setTranslation(.zero, in: recognizer.view)
+    }
 }
 
 private extension UIButton {

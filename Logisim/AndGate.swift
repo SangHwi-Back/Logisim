@@ -8,6 +8,15 @@
 import UIKit
 
 class AndGate: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .clear
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         
