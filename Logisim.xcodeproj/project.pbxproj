@@ -11,6 +11,7 @@
 		1B0506E02B1382C60022BCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506DF2B1382C60022BCCE /* Assets.xcassets */; };
 		1B0506E32B1382C60022BCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506E12B1382C60022BCCE /* LaunchScreen.storyboard */; };
 		1B0508292B14CB8A0022BCCE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0508282B14CB8A0022BCCE /* MainViewController.swift */; };
+		1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B253A6F2B2AB81B003873DF /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		1B0508282B14CB8A0022BCCE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1B05083B2B14D00A0022BCCE /* Logisim.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logisim.xctestplan; sourceTree = "<group>"; };
 		1B05086B2B14D7E80022BCCE /* Logisim-Element.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Element.xcodeproj"; path = "Logisim-Element/Logisim-Element.xcodeproj"; sourceTree = "<group>"; };
+		1B253A6F2B2AB81B003873DF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				1B0506EA2B14209F0022BCCE /* README.md */,
 				1B05083C2B14D01B0022BCCE /* Resources */,
 				1B0508282B14CB8A0022BCCE /* MainViewController.swift */,
+				1B253A6F2B2AB81B003873DF /* View+Extensions.swift */,
 			);
 			path = Logisim;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B0508292B14CB8A0022BCCE /* MainViewController.swift in Sources */,
+				1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */,
 				1B0506D52B1382C40022BCCE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

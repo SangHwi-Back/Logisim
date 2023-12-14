@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
+        view.makeGrid()
     }
     
     override func viewDidLoad() {
