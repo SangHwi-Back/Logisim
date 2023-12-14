@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
     
     @objc 
     func addANDGate(_ sender: Any) {
-        let gate = AndGate(frame: .init(
+        let gate = ANDGate(frame: .init(
             origin: .init(x: 100, y: 100),
             size: .init(width: 150, height: 150)))
         gate.addGesture()
