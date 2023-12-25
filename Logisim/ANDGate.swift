@@ -9,7 +9,7 @@ import UIKit
 
 class ANDGate: UIView {
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: CGRect(origin: frame.origin, size: CGSize(width: 100, height: 100)))
         backgroundColor = .clear
     }
     

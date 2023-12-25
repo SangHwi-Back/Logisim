@@ -9,16 +9,15 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    let buttonStackView: UIStackView = {
-        return UIStackView().toNormalStack()
+    let menuButton: CircleButton = {
+        let button = CircleButton(frame: CGRect(origin: .zero, size: CGSize(width: 40, height: 40)))
+        button.symbol = .hamburger
+        return button
     }()
     
-    let addANDGateButton: UIButton = {
-        return UIButton().toNormalButton(as: "+ AND")
-    }()
-    
-    let addORGateButton: UIButton = {
-        return UIButton().toNormalButton(as: "+ OR")
+    let menuView: MainViewSubMenuView = {
+        let view = MainViewSubMenuView(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 450)))
+        return view
     }()
     
     override func loadView() {
@@ -26,37 +25,36 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         view.makeGrid()
         
-        view.addSubview(buttonStackView)
-        buttonStackView.addArrangedSubview(addANDGateButton)
-        buttonStackView.addArrangedSubview(addORGateButton)
-        addANDGateButton.addTarget(self, action: #selector(addANDGate), for: .touchUpInside)
-        addORGateButton.addTarget(self, action: #selector(addORGate), for: .touchUpInside)
+        view.addSubview(menuButton)
+        menuButton.frame.origin = CGPoint(x: view.frame.width - 80, y: 20)
+        menuButton.addTarget(self, action: #selector(addMenu(_:)), for: .touchUpInside)
         
-        buttonStackView.frame.origin.y = view.frame.maxY - 60
-        buttonStackView.frame.size = CGSize(width: 180, height: 60)
-        buttonStackView.center.x = view.center.x
+        menuView.frame.origin = CGPoint(x: menuButton.frame.maxX - 300, y: menuButton.frame.maxY + 10)
+        menuView.menus = [
+            .init(name: "Menu1", handler: {
+                let gate = ANDGate()
+                gate.addGesture()
+                self.view.addSubview(gate)
+            }),
+            .init(name: "Menu2", handler: {
+                let gate = ORGate()
+                gate.addGesture()
+                self.view.addSubview(gate)
+            })
+        ]
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @objc 
-    func addANDGate(_ sender: Any) {
-        let gate = ANDGate(frame: .init(
-            origin: .init(x: 100, y: 100),
-            size: .init(width: 150, height: 150)))
-        gate.addGesture()
-        self.view.addSubview(gate)
-    }
-    
-    @objc 
-    func addORGate(_ sender: Any) {
-        let gate = ORGate(frame: .init(
-            origin: .init(x: 200, y: 200),
-            size: .init(width: 150, height: 150)))
-        gate.addGesture()
-        self.view.addSubview(gate)
+    @objc
+    func addMenu(_ sender: Any?) {
+        if view.subviews.contains(where: {$0 == menuView}) {
+            menuView.removeFromSuperview()
+        } else {
+            view.addSubview(menuView)
+        }
     }
 }
 
