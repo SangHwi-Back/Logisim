@@ -14,9 +14,13 @@ extension CALayer {
     }
     
     func setNormalCorner() {
-        if frame.width > 100 {
+        let value = min(frame.width, frame.height)
+        
+        if value >= 200 {
             cornerRadius = 30
-        } else if frame.width > 10 {
+        } else if value >= 80 {
+            cornerRadius = 10
+        } else if value > 10 {
             cornerRadius = 5
         }
     }
