@@ -15,10 +15,7 @@ class MainViewController: UIViewController {
         return button
     }()
     
-    let menuView: MainViewSubMenuView = {
-        let view = MainViewSubMenuView(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 450)))
-        return view
-    }()
+    let menuView = MainViewSubMenuView()
     
     override func loadView() {
         super.loadView()
@@ -29,9 +26,20 @@ class MainViewController: UIViewController {
         menuButton.frame.origin = CGPoint(x: view.frame.width - 80, y: 20)
         menuButton.addTarget(self, action: #selector(addMenu(_:)), for: .touchUpInside)
         
-        menuView.frame.origin = CGPoint(x: menuButton.frame.maxX - 300, y: menuButton.frame.maxY + 10)
+        view.addSubview(menuView)
+        menuView.translatesAutoresizingMaskIntoConstraints = false
+        menuView.topAnchor
+            .constraint(equalTo: menuButton.bottomAnchor, constant: 10).isActive = true
+        menuView.trailingAnchor
+            .constraint(equalTo: menuButton.trailingAnchor).isActive = true
+        menuView.heightAnchor
+            .constraint(greaterThanOrEqualToConstant: 40).isActive = true
+        menuView.widthAnchor
+            .constraint(greaterThanOrEqualToConstant: 40).isActive = true
+        menuView.isHidden = true
+
         menuView.menus = [
-            .init(name: "Menu1", handler: {
+            .init(name: "Menu1Menu1Menu1Menu1", handler: {
                 let gate = ANDGate()
                 gate.addGesture()
                 self.view.addSubview(gate)
@@ -50,14 +58,12 @@ class MainViewController: UIViewController {
     
     @objc
     func addMenu(_ sender: Any?) {
-        UIView.transition(with: view, duration: 0.4, options: [.transitionCrossDissolve]) { [weak menuView, view] in
-            guard let menuView, let superView = view else { return }
-            
-            if menuView.superview == superView {
-                menuView.removeFromSuperview()
-            } else {
-                superView.addSubview(menuView)
-            }
+        UIView.transition(
+            with: view,
+            duration: 0.4,
+            options: [.transitionCrossDissolve]
+        ) { [weak menuView] in
+            menuView?.isHidden = !(menuView?.isHidden ?? false)
         }
     }
 }

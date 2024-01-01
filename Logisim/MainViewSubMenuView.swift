@@ -7,77 +7,74 @@
 
 import UIKit
 
-class MainViewSubMenuView: UIView {
-    
+class MainViewSubMenuView: UIStackView {
     var menus: [MainViewSubMenuModel] = [] {
         didSet {
-            setNeedsDisplay()
+            menus.forEach { model in
+                let menu = FrameOfMenu(frame: .zero, model: model)
+                addArrangedSubview(menu)
+                menu.translatesAutoresizingMaskIntoConstraints = false
+                menu.heightAnchor.constraint(equalToConstant: 40).isActive = true
+                menu.widthAnchor.constraint(greaterThanOrEqualToConstant: 40).isActive = true
+            }
+            
+            layoutIfNeeded()
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemBackground
+        axis = .vertical
+        distribution = .fillEqually
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        addSubview(stackView)
-        stackView.frame = rect.insetBy(dx: 10, dy: 10)
-        stackView.distribution = .fillEqually
-        
-        menus.forEach { model in
-            let menu = FrameOfMenu(frame: CGRect(origin: .zero, size: CGSize(width: rect.width, height: 40)), model: model)
-            stackView.addArrangedSubview(menu)
-        }
-        
         layer.setNormalCorner()
         layer.setNormalBorder()
-        
         clipsToBounds = true
     }
     
-    class FrameOfMenu: UIView {
-        var model: MainViewSubMenuModel?
+    class FrameOfMenu: UIStackView {
+        private let button = UIButton()
+        private var model: MainViewSubMenuModel?
+        
         @objc func onTap(_ sender: Any) {
             model?.handler()
         }
         
-        convenience init(frame: CGRect, model: MainViewSubMenuModel) {
-            self.init(frame: frame)
+        override init(frame: CGRect) {
+            super.init(frame: frame)
             
             backgroundColor = .clear
-            let stackView = UIStackView(frame: frame)
-            stackView.axis = .horizontal
-            stackView.spacing = 5
-            stackView.backgroundColor = .clear
-            addSubview(stackView)
+            axis = .horizontal
+            spacing = 5
+            backgroundColor = .white
             
-            let button = UIButton()
-            button.setTitle(model.name, for: .normal)
             button.setTitleColor(.black, for: .normal)
             button.titleLabel?.minimumScaleFactor = 0.2
+            button.titleLabel?.textAlignment = .left
+            button.contentHorizontalAlignment = .left
+            button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
             button.backgroundColor = .clear
             button.addTarget(self, action: #selector(onTap(_:)), for: .touchUpInside)
             
+            addArrangedSubview(button)
+        }
+        
+        convenience init(frame: CGRect, model: MainViewSubMenuModel) {
+            self.init(frame: frame)
             self.model = model
-            
-            stackView.addArrangedSubview(button)
+            button.setTitle(model.name, for: .normal)
         }
         
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-        }
-        
-        required init?(coder: NSCoder) {
-            super.init(coder: coder)
+        required init(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
         }
     }
 }

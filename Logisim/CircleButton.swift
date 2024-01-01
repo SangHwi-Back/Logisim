@@ -25,16 +25,18 @@ class CircleButton: UIButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        layer.setCircle()
-        layer.setNormalBorder()
-        
         subviews.forEach({
             $0.removeFromSuperview()
         })
         
+        layer.setCircle()
+        layer.backgroundColor = UIColor.lightGray.cgColor
+        clipsToBounds = true
+        
         if let symbol = symbol {
             setImage(UIImage(systemName: symbol.systemName(state: .highlighted)), for: .highlighted)
             setImage(UIImage(systemName: symbol.systemName(state: .normal)), for: .normal)
+            tintColor = UIColor.separator
         }
     }
     
