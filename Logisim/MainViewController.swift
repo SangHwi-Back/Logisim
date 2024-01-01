@@ -50,13 +50,13 @@ class MainViewController: UIViewController {
     
     @objc
     func addMenu(_ sender: Any?) {
-        UIView.transition(with: view, duration: 0.4, options: [.transitionCrossDissolve]) { [weak self] in
-            guard let self = self else { return }
+        UIView.transition(with: view, duration: 0.4, options: [.transitionCrossDissolve]) { [weak menuView, view] in
+            guard let menuView, let superView = view else { return }
             
-            if self.view.subviews.contains(where: {$0 == self.menuView}) {
-                self.menuView.removeFromSuperview()
+            if menuView.superview == superView {
+                menuView.removeFromSuperview()
             } else {
-                self.view.addSubview(self.menuView)
+                superView.addSubview(menuView)
             }
         }
     }
