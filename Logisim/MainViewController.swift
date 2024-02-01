@@ -33,18 +33,18 @@ class MainViewController: UIViewController {
         menuView.trailingAnchor
             .constraint(equalTo: menuButton.trailingAnchor).isActive = true
         menuView.heightAnchor
-            .constraint(greaterThanOrEqualToConstant: 40).isActive = true
+            .constraint(greaterThanOrEqualToConstant: 200).isActive = true
         menuView.widthAnchor
-            .constraint(greaterThanOrEqualToConstant: 40).isActive = true
+            .constraint(greaterThanOrEqualToConstant: 300).isActive = true
         menuView.isHidden = true
 
         menuView.menus = [
-            .init(name: "Menu1Menu1Menu1Menu1", handler: {
+            .init(category: .gate, name: "(Gate) OR", handler: {
                 let gate = ANDGate()
                 gate.addGesture()
                 self.view.addSubview(gate)
             }),
-            .init(name: "Menu2", handler: {
+            .init(category: .gate, name: "(Gate) AND", handler: {
                 let gate = ORGate()
                 gate.addGesture()
                 self.view.addSubview(gate)

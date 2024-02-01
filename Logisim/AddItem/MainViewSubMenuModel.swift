@@ -7,7 +7,16 @@
 
 import Foundation
 
+enum CategoryMainViewItem: Int {
+    case gate
+    
+    var sectionNumber: Int {
+        return rawValue
+    }
+}
+
 struct MainViewSubMenuModel {
+    var category: CategoryMainViewItem
     var name: String
     var handler: () -> Void
 }
