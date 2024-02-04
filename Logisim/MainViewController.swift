@@ -9,6 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     private let gateSize = CGSize(width: 100, height: 100)
+    private var lastResponderGate: GateProtocol?
     
     let menuButton: CircleButton = {
         let button = CircleButton(frame: CGRect(origin: .zero, size: CGSize(width: 40, height: 40)))
@@ -17,6 +18,11 @@ class MainViewController: UIViewController {
     }()
     
     let menuView = MainViewSubMenuView()
+    
+    var insetLastGate: CGRect {
+        let origin = lastResponderGate?.gateViewFrame?.insettedOrigin ?? .zero
+        return CGRect(origin: origin, size: gateSize)
+    }
     
     override func loadView() {
         super.loadView()
@@ -38,17 +44,15 @@ class MainViewController: UIViewController {
         menuView.widthAnchor
             .constraint(greaterThanOrEqualToConstant: 300).isActive = true
         menuView.isHidden = true
-
+        
         menuView.menus = [
-            .init(category: .gate(.OR), name: "OR", handler: { [gateSize] in
-                let gate = ANDGate(frame: CGRect(origin: .zero, size: gateSize))
-                gate.addGesture()
-                self.view.addSubview(gate)
+            .init(category: .gate(.OR), name: "OR", handler: { [weak self] in
+                guard let self = self else { return }
+                self.addGate(ANDGate(frame: self.insetLastGate))
             }),
-            .init(category: .gate(.AND), name: "AND", handler: { [gateSize] in
-                let gate = ORGate(frame: CGRect(origin: .zero, size: gateSize))
-                gate.addGesture()
-                self.view.addSubview(gate)
+            .init(category: .gate(.AND), name: "AND", handler: { [weak self] in
+                guard let self = self else { return }
+                self.addGate(ORGate(frame: self.insetLastGate))
             })
         ]
     }
@@ -65,6 +69,20 @@ class MainViewController: UIViewController {
             options: [.transitionCrossDissolve]
         ) { [weak menuView] in
             menuView?.isHidden = !(menuView?.isHidden ?? false)
+        }
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        super.becomeFirstResponder()
+        lastResponderGate = self.view.subviews.first(where: { $0.isFirstResponder }) as? GateProtocol
+        return true
+    }
+    
+    private func addGate(_ gate: any GateProtocol) {
+        self.lastResponderGate = gate
+        if let v = gate as? UIView {
+            v.addGesture()
+            self.view.addSubview(v)
         }
     }
 }
@@ -88,6 +106,12 @@ private extension UIStackView {
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
         return self
+    }
+}
+
+private extension CGRect {
+    var insettedOrigin: CGPoint {
+        insetBy(dx: 10, dy: 10).origin
     }
 }
 

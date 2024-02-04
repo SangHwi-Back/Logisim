@@ -7,9 +7,12 @@
 
 import UIKit
 
-class ANDGate: UIView {
+class ANDGate: UIView, GateProtocol {
+    internal var gateViewFrame: CGRect?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.gateViewFrame = frame
         backgroundColor = .clear
     }
     

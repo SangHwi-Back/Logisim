@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B04EBCF2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04EBCE2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift */; };
 		1B04EBD12B6C2A7F00484620 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04EBD02B6C2A7F00484620 /* Collection+Extensions.swift */; };
+		1B04EBDA2B6F95BA00484620 /* GateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04EBD92B6F95BA00484620 /* GateProtocol.swift */; };
 		1B0506D52B1382C40022BCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0506D42B1382C40022BCCE /* AppDelegate.swift */; };
 		1B0506E02B1382C60022BCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506DF2B1382C60022BCCE /* Assets.xcassets */; };
 		1B0506E32B1382C60022BCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506E12B1382C60022BCCE /* LaunchScreen.storyboard */; };
@@ -139,6 +140,7 @@
 /* Begin PBXFileReference section */
 		1B04EBCE2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSubMenuTableViewCell.swift; sourceTree = "<group>"; };
 		1B04EBD02B6C2A7F00484620 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		1B04EBD92B6F95BA00484620 /* GateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateProtocol.swift; sourceTree = "<group>"; };
 		1B0506D12B1382C40022BCCE /* Logisim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logisim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0506D42B1382C40022BCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B0506DF2B1382C60022BCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				1B04EBBF2B6C20FA00484620 /* AddItem */,
 				1B89DC302B395CE4000274F2 /* CircleButton.swift */,
 				1B253A862B2AC036003873DF /* ANDGate.swift */,
+				1B04EBD92B6F95BA00484620 /* GateProtocol.swift */,
 				1B253A962B2AC03A003873DF /* ORGate.swift */,
 				1B253A6F2B2AB81B003873DF /* View+Extensions.swift */,
 				1B04EBD02B6C2A7F00484620 /* Collection+Extensions.swift */,
@@ -513,6 +516,7 @@
 				1B253A972B2AC03A003873DF /* ORGate.swift in Sources */,
 				1B0508292B14CB8A0022BCCE /* MainViewController.swift in Sources */,
 				1B04EBD12B6C2A7F00484620 /* Collection+Extensions.swift in Sources */,
+				1B04EBDA2B6F95BA00484620 /* GateProtocol.swift in Sources */,
 				1B89DC312B395CE4000274F2 /* CircleButton.swift in Sources */,
 				1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */,
 				1B04EBCF2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift in Sources */,
