@@ -7,11 +7,17 @@
 
 import Foundation
 
-enum CategoryMainViewItem: Int {
-    case gate
+enum CategoryMainViewItem: Hashable {
+    enum GateType {
+    case OR, AND
+    }
+    
+    case gate(GateType)
     
     var sectionNumber: Int {
-        return rawValue
+        switch self {
+        case .gate(_): return 0
+        }
     }
 }
 

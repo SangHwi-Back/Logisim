@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewSubMenuTableViewCell: UITableViewCell {
-
+    private let thumbnail = UIView()
     private let label = UILabel()
     private var model: MainViewSubMenuModel?
     
@@ -18,9 +18,17 @@ class MainViewSubMenuTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         label.textAlignment = .left
         label.textColor = .black
-        contentView.addEqualPadEdgesSubview(label, padding: 10)
+        
+        let stackView = UIStackView(arrangedSubviews: [thumbnail, label])
+        stackView.spacing = 8
+        thumbnail.translatesAutoresizingMaskIntoConstraints = false
+        thumbnail.widthAnchor.constraint(equalTo: thumbnail.heightAnchor, multiplier: 1).isActive = true
+        thumbnail.widthAnchor.constraint(greaterThanOrEqualToConstant: 40).isActive = true
+        thumbnail.contentMode = .scaleAspectFit
+        contentView.addEqualPadEdgesSubview(stackView, padding: 10)
         self.backgroundColor = .opaqueSeparator
     }
     
@@ -31,6 +39,17 @@ class MainViewSubMenuTableViewCell: UITableViewCell {
     func setModel(_ model: MainViewSubMenuModel) {
         self.model = model
         self.label.text = model.name
+        
+        if thumbnail.subviews.isEmpty, case .gate(let gateType) = model.category {
+            let gate: UIView
+            switch gateType {
+            case .OR: gate = ORGate()
+            case .AND: gate = ANDGate()
+            }
+            
+            gate.backgroundColor = .clear
+            thumbnail.addEqualEdgesSubview(gate)
+        }
     }
     
     override func prepareForReuse() {

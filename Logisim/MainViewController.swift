@@ -8,6 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    private let gateSize = CGSize(width: 100, height: 100)
     
     let menuButton: CircleButton = {
         let button = CircleButton(frame: CGRect(origin: .zero, size: CGSize(width: 40, height: 40)))
@@ -39,13 +40,13 @@ class MainViewController: UIViewController {
         menuView.isHidden = true
 
         menuView.menus = [
-            .init(category: .gate, name: "(Gate) OR", handler: {
-                let gate = ANDGate()
+            .init(category: .gate(.OR), name: "OR", handler: { [gateSize] in
+                let gate = ANDGate(frame: CGRect(origin: .zero, size: gateSize))
                 gate.addGesture()
                 self.view.addSubview(gate)
             }),
-            .init(category: .gate, name: "(Gate) AND", handler: {
-                let gate = ORGate()
+            .init(category: .gate(.AND), name: "AND", handler: { [gateSize] in
+                let gate = ORGate(frame: CGRect(origin: .zero, size: gateSize))
                 gate.addGesture()
                 self.view.addSubview(gate)
             })

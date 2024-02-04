@@ -47,20 +47,11 @@ class MainViewSubMenuView: UIView {
 
 extension MainViewSubMenuView: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        var categorySet = Set<CategoryMainViewItem>()
-        menus.forEach {
-            categorySet.insert($0.category)
-        }
-        
-        return categorySet.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let category = getCategory(in: section) {
-            return menus.filter({$0.category == category}).count
-        }
-        
-        return 0
+        return menus.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
