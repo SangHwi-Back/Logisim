@@ -63,6 +63,10 @@ class MainViewController: UIViewController {
     
     @objc
     func addMenu(_ sender: Any?) {
+        toggleMenuViewHidden()
+    }
+    
+    private func toggleMenuViewHidden() {
         UIView.transition(
             with: view,
             duration: 0.4,
@@ -81,9 +85,18 @@ class MainViewController: UIViewController {
     private func addGate(_ gate: any GateProtocol) {
         self.lastResponderGate = gate
         if let v = gate as? UIView {
-            v.addGesture()
+            v.addGesture(self)
             self.view.addSubview(v)
         }
+    }
+}
+
+extension MainViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if menuView.isHidden == false {
+            toggleMenuViewHidden()
+        }
+        return true
     }
 }
 
@@ -117,13 +130,18 @@ private extension CGRect {
 
 private extension UIView {
     
-    func addGesture() {
-        addGestureRecognizer(UIPanGestureRecognizer(
+    func addGesture(_ delegate: UIGestureRecognizerDelegate? = nil) {
+        let panGesture = UIPanGestureRecognizer(
             target: self,
-            action: #selector(gateGesturePan(_:))))
-        addGestureRecognizer(UIPinchGestureRecognizer(
+            action: #selector(gateGesturePan(_:)))
+        panGesture.delegate = delegate
+        addGestureRecognizer(panGesture)
+        
+        let pinchGesture = UIPinchGestureRecognizer(
             target: self,
-            action: #selector(gateGesturePinch(_:))))
+            action: #selector(gateGesturePinch(_:)))
+        pinchGesture.delegate = delegate
+        addGestureRecognizer(pinchGesture)
     }
     
     @objc
