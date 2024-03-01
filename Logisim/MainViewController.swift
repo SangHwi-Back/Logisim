@@ -12,15 +12,15 @@ class MainViewController: UIViewController {
     private var lastResponderGate: GateProtocol?
     private lazy var backgroundView = GridView(frame: view.frame)
     
-    let menuButton: CircleButton = {
+    private let menuButton: CircleButton = {
         let button = CircleButton(frame: CGRect(origin: .zero, size: CGSize(width: 40, height: 40)))
         button.symbol = .hamburger
         return button
     }()
     
-    let menuView = MainViewSubMenuView()
+    private let mainViewSubMenuView = MainViewSubMenuView()
     
-    var insetLastGate: CGRect {
+    private var insetLastGate: CGRect {
         let origin = lastResponderGate?.gateViewFrame?.insettedOrigin ?? .zero
         return CGRect(origin: origin, size: gateSize)
     }
@@ -34,42 +34,36 @@ class MainViewController: UIViewController {
         menuButton.frame.origin = CGPoint(x: view.frame.width - 80, y: 20)
         menuButton.addTarget(self, action: #selector(menuButtonTapped(_:)), for: .touchUpInside)
         
-        view.addSubview(menuView)
-        menuView.translatesAutoresizingMaskIntoConstraints = false
-        menuView.topAnchor
+        view.addSubview(mainViewSubMenuView)
+        mainViewSubMenuView.translatesAutoresizingMaskIntoConstraints = false
+        mainViewSubMenuView.topAnchor
             .constraint(equalTo: menuButton.bottomAnchor, constant: 10).isActive = true
-        menuView.trailingAnchor
+        mainViewSubMenuView.trailingAnchor
             .constraint(equalTo: menuButton.trailingAnchor).isActive = true
-        menuView.heightAnchor
+        mainViewSubMenuView.heightAnchor
             .constraint(greaterThanOrEqualToConstant: 200).isActive = true
-        menuView.widthAnchor
+        mainViewSubMenuView.widthAnchor
             .constraint(greaterThanOrEqualToConstant: 300).isActive = true
-        menuView.isHidden = true
+        mainViewSubMenuView.isHidden = true
         
-        menuView.menus = [
+        mainViewSubMenuView.menus = [
             .init(category: .gate(.OR), name: "OR", handler: { [weak self] in
-                guard let self = self else { return }
-                self.addGate(ANDGate(frame: self.insetLastGate))
+                self?.addGate(ANDGate(frame: self?.insetLastGate ?? .zero))
             }),
             .init(category: .gate(.AND), name: "AND", handler: { [weak self] in
-                guard let self = self else { return }
-                self.addGate(ORGate(frame: self.insetLastGate))
+                self?.addGate(ORGate(frame: self?.insetLastGate ?? .zero))
             })
         ]
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     @objc
-    func menuButtonTapped(_ sender: Any?) {
+    private func menuButtonTapped(_ sender: Any?) {
         toggleMenuViewHidden()
     }
     
     @objc
-    func backgroundViewTapped(_ sender: Any?) {
-        guard menuView.isHidden == false else { return }
+    private func backgroundViewTapped(_ sender: Any?) {
+        guard mainViewSubMenuView.isHidden == false else { return }
         toggleMenuViewHidden()
     }
     
@@ -78,8 +72,8 @@ class MainViewController: UIViewController {
             with: view,
             duration: 0.4,
             options: [.transitionCrossDissolve]
-        ) { [weak menuView] in
-            menuView?.isHidden = !(menuView?.isHidden ?? false)
+        ) { [weak mainViewSubMenuView] in
+            mainViewSubMenuView?.isHidden = !(mainViewSubMenuView?.isHidden ?? false)
         }
     }
     
@@ -100,32 +94,10 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if menuView.isHidden == false {
+        if mainViewSubMenuView.isHidden == false {
             toggleMenuViewHidden()
         }
         return true
-    }
-}
-
-private extension UIButton {
-    func toNormalButton(as title: String) -> UIButton {
-        frame.size = .init(width: 80, height: 55)
-        setTitle(title, for: .normal)
-        setTitleColor(.black, for: .normal)
-        backgroundColor = .white
-        return self
-    }
-}
-
-private extension UIStackView {
-    func toNormalStack() -> UIStackView {
-        spacing = 10
-        axis = .horizontal
-        distribution = .fillEqually
-        backgroundColor = .lightGray
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.black.cgColor
-        return self
     }
 }
 
@@ -136,7 +108,6 @@ private extension CGRect {
 }
 
 private extension UIView {
-    
     func addGesture(_ delegate: UIGestureRecognizerDelegate? = nil) {
         let panGesture = UIPanGestureRecognizer(
             target: self,
