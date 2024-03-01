@@ -7,25 +7,7 @@
 
 import UIKit
 
-public class ORGate: UIView, GateProtocol {
-    public var gateViewFrame: CGRect?
-    
-    public override var frame: CGRect {
-        didSet {
-            self.gateViewFrame = frame
-        }
-    }
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.gateViewFrame = frame
-        backgroundColor = .clear
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
+public class ORGate: CommonGate {
     public override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         

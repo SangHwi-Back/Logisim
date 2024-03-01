@@ -7,19 +7,7 @@
 
 import UIKit
 
-public class ANDGate: UIView, GateProtocol {
-    public var gateViewFrame: CGRect?
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.gateViewFrame = frame
-        backgroundColor = .clear
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
+public class ANDGate: CommonGate {
     public override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         let origin = CGPoint(x: (rect.width / 2) - (rect.width * 0.4), y: (rect.height / 2) - (rect.height * 0.275))

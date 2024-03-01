@@ -21,9 +21,8 @@ class MainViewController: UIViewController {
     
     private let mainViewSubMenuView = MainViewSubMenuView()
     
-    private var insetLastGate: CGRect {
-        let origin = lastResponderGate?.gateViewFrame?.insettedOrigin ?? .zero
-        return CGRect(origin: origin, size: gateSize)
+    private var insetLastGate: CGPoint {
+        lastResponderGate?.insettedOrigin?.origin ?? .zero
     }
     
     override func loadView() {
@@ -49,10 +48,14 @@ class MainViewController: UIViewController {
         
         mainViewSubMenuView.menus = [
             .init(category: .gate(.OR), name: "OR", handler: { [weak self] in
-                self?.addGate(ANDGate(frame: self?.insetLastGate ?? .zero))
+                self?.addGate(ANDGate(
+                    origin: self?.insetLastGate ?? .zero,
+                    withInset: true))
             }),
             .init(category: .gate(.AND), name: "AND", handler: { [weak self] in
-                self?.addGate(ORGate(frame: self?.insetLastGate ?? .zero))
+                self?.addGate(ORGate(
+                    origin: self?.insetLastGate ?? .zero,
+                    withInset: true))
             })
         ]
     }
@@ -78,12 +81,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    override func becomeFirstResponder() -> Bool {
-        super.becomeFirstResponder()
-        lastResponderGate = self.view.subviews.first(where: { $0.isFirstResponder }) as? GateProtocol
-        return true
-    }
-    
     private func addGate(_ gate: any GateProtocol) {
         self.lastResponderGate = gate
         if let v = gate as? UIView {
@@ -98,6 +95,9 @@ extension MainViewController: UIGestureRecognizerDelegate {
         if mainViewSubMenuView.isHidden == false {
             toggleMenuViewHidden()
         }
+        
+        self.lastResponderGate = gestureRecognizer.view as? GateProtocol
+        
         return true
     }
 }

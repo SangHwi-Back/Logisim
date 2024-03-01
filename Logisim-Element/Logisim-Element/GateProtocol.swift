@@ -12,6 +12,14 @@ public protocol GateProtocol {
 }
 
 extension GateProtocol {
+    func setClearFrame(_ frame: CGRect) {}
+    
+    public var insettedOrigin: CGRect? {
+        gateViewFrame?.withGateInset
+    }
+}
+
+extension GateProtocol {
     var gateOrigin: CGPoint? {
         gateViewFrame?.origin
     }

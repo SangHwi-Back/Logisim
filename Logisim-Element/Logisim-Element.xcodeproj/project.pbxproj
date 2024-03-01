@@ -14,6 +14,8 @@
 		1B6C38762B91C2E70066C6A3 /* ANDGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38742B91C2E70066C6A3 /* ANDGate.swift */; };
 		1B6C38772B91C2E70066C6A3 /* ORGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38752B91C2E70066C6A3 /* ORGate.swift */; };
 		1B6C38792B91C2F40066C6A3 /* GateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */; };
+		1B6C387D2B91C5CB0066C6A3 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */; };
+		1B6C38812B91E9800066C6A3 /* CommonGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38802B91E9800066C6A3 /* CommonGate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		1B6C38742B91C2E70066C6A3 /* ANDGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANDGate.swift; sourceTree = "<group>"; };
 		1B6C38752B91C2E70066C6A3 /* ORGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORGate.swift; sourceTree = "<group>"; };
 		1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateProtocol.swift; sourceTree = "<group>"; };
+		1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		1B6C38802B91E9800066C6A3 /* CommonGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		1B0506F72B14BC660022BCCE /* Logisim-Element */ = {
 			isa = PBXGroup;
 			children = (
+				1B6C38802B91E9800066C6A3 /* CommonGate.swift */,
 				1B6C38742B91C2E70066C6A3 /* ANDGate.swift */,
 				1B6C38752B91C2E70066C6A3 /* ORGate.swift */,
 				1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */,
+				1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */,
 				1B0506F82B14BC660022BCCE /* Logisim_Element.h */,
 				1B0506F92B14BC660022BCCE /* Logisim_Element.docc */,
 			);
@@ -204,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B6C38792B91C2F40066C6A3 /* GateProtocol.swift in Sources */,
+				1B6C387D2B91C5CB0066C6A3 /* UIKit+Extensions.swift in Sources */,
 				1B6C38772B91C2E70066C6A3 /* ORGate.swift in Sources */,
+				1B6C38812B91E9800066C6A3 /* CommonGate.swift in Sources */,
 				1B6C38762B91C2E70066C6A3 /* ANDGate.swift in Sources */,
 				1B0506FA2B14BC660022BCCE /* Logisim_Element.docc in Sources */,
 			);

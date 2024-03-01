@@ -9,28 +9,35 @@ import XCTest
 @testable import Logisim_Element
 
 final class Logisim_ElementTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_gateSize() throws {
+        let andGate = ANDGate(withInset: true), orGate = ORGate(withInset: true)
+        
+        XCTAssertEqual(andGate.frame.size, CGSize.gateSize)
+        XCTAssertEqual(orGate.frame.size, CGSize.gateSize)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_gateOrigin() throws {
+        var andGate: GateProtocol = ANDGate(withInset: true), orGate: GateProtocol = ORGate(withInset: true)
+        
+        if let andGateOrigin = andGate.gateOrigin, let orGateOrigin = orGate.gateOrigin {
+            XCTAssertEqual(andGateOrigin.x, CGFloat.commonInsetValue)
+            XCTAssertEqual(andGateOrigin.y, CGFloat.commonInsetValue)
+            XCTAssertEqual(orGateOrigin.x, CGFloat.commonInsetValue)
+            XCTAssertEqual(orGateOrigin.y, CGFloat.commonInsetValue)
+        } else {
+            XCTFail()
+        }
+        
+        andGate = ANDGate(withInset: false)
+        orGate = ORGate(withInset: false)
+        
+        if let andGateOrigin = andGate.gateOrigin, let orGateOrigin = orGate.gateOrigin {
+            XCTAssertEqual(andGateOrigin.x, 0)
+            XCTAssertEqual(andGateOrigin.y, 0)
+            XCTAssertEqual(orGateOrigin.x, 0)
+            XCTAssertEqual(orGateOrigin.y, 0)
+        } else {
+            XCTFail()
         }
     }
-
 }
