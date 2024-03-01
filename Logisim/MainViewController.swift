@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     private let gateSize = CGSize(width: 100, height: 100)
     private var lastResponderGate: GateProtocol?
+    private lazy var backgroundView = GridView(frame: view.frame)
     
     let menuButton: CircleButton = {
         let button = CircleButton(frame: CGRect(origin: .zero, size: CGSize(width: 40, height: 40)))
@@ -26,12 +27,12 @@ class MainViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        view.backgroundColor = .white
-        view.makeGrid()
+        view.addSubview(backgroundView)
+        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backgroundViewTapped(_:))))
         
         view.addSubview(menuButton)
         menuButton.frame.origin = CGPoint(x: view.frame.width - 80, y: 20)
-        menuButton.addTarget(self, action: #selector(addMenu(_:)), for: .touchUpInside)
+        menuButton.addTarget(self, action: #selector(menuButtonTapped(_:)), for: .touchUpInside)
         
         view.addSubview(menuView)
         menuView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,7 +63,13 @@ class MainViewController: UIViewController {
     }
     
     @objc
-    func addMenu(_ sender: Any?) {
+    func menuButtonTapped(_ sender: Any?) {
+        toggleMenuViewHidden()
+    }
+    
+    @objc
+    func backgroundViewTapped(_ sender: Any?) {
+        guard menuView.isHidden == false else { return }
         toggleMenuViewHidden()
     }
     

@@ -17,6 +17,7 @@
 		1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B253A6F2B2AB81B003873DF /* View+Extensions.swift */; };
 		1B253A872B2AC036003873DF /* ANDGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B253A862B2AC036003873DF /* ANDGate.swift */; };
 		1B253A972B2AC03A003873DF /* ORGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B253A962B2AC03A003873DF /* ORGate.swift */; };
+		1B88DB1E2B6FBA9E00767809 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B88DB1D2B6FBA9E00767809 /* GridView.swift */; };
 		1B89DC312B395CE4000274F2 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC302B395CE4000274F2 /* CircleButton.swift */; };
 		1B89DC412B39679A000274F2 /* MainViewSubMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC402B39679A000274F2 /* MainViewSubMenuView.swift */; };
 		1B89DC432B3967FF000274F2 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC422B3967FF000274F2 /* CALayer+Extensions.swift */; };
@@ -159,6 +160,7 @@
 		1B253A6F2B2AB81B003873DF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		1B253A862B2AC036003873DF /* ANDGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANDGate.swift; sourceTree = "<group>"; };
 		1B253A962B2AC03A003873DF /* ORGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORGate.swift; sourceTree = "<group>"; };
+		1B88DB1D2B6FBA9E00767809 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		1B89DC302B395CE4000274F2 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		1B89DC402B39679A000274F2 /* MainViewSubMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSubMenuView.swift; sourceTree = "<group>"; };
 		1B89DC422B3967FF000274F2 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				1B04EBBF2B6C20FA00484620 /* AddItem */,
 				1B89DC302B395CE4000274F2 /* CircleButton.swift */,
 				1B253A862B2AC036003873DF /* ANDGate.swift */,
+				1B88DB1D2B6FBA9E00767809 /* GridView.swift */,
 				1B04EBD92B6F95BA00484620 /* GateProtocol.swift */,
 				1B253A962B2AC03A003873DF /* ORGate.swift */,
 				1B253A6F2B2AB81B003873DF /* View+Extensions.swift */,
@@ -518,6 +521,7 @@
 				1B04EBD12B6C2A7F00484620 /* Collection+Extensions.swift in Sources */,
 				1B04EBDA2B6F95BA00484620 /* GateProtocol.swift in Sources */,
 				1B89DC312B395CE4000274F2 /* CircleButton.swift in Sources */,
+				1B88DB1E2B6FBA9E00767809 /* GridView.swift in Sources */,
 				1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */,
 				1B04EBCF2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift in Sources */,
 				1B89DC412B39679A000274F2 /* MainViewSubMenuView.swift in Sources */,

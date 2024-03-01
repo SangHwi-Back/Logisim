@@ -10,6 +10,12 @@ import UIKit
 class ORGate: UIView, GateProtocol {
     internal var gateViewFrame: CGRect?
     
+    override var frame: CGRect {
+        didSet {
+            self.gateViewFrame = frame
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.gateViewFrame = frame
