@@ -11,6 +11,9 @@
 		1B0507002B14BC660022BCCE /* Logisim_Element.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0506F52B14BC660022BCCE /* Logisim_Element.framework */; };
 		1B0507052B14BC660022BCCE /* Logisim_ElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0507042B14BC660022BCCE /* Logisim_ElementTests.swift */; };
 		1B0507062B14BC660022BCCE /* Logisim_Element.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B0506F82B14BC660022BCCE /* Logisim_Element.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B6C38762B91C2E70066C6A3 /* ANDGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38742B91C2E70066C6A3 /* ANDGate.swift */; };
+		1B6C38772B91C2E70066C6A3 /* ORGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38752B91C2E70066C6A3 /* ORGate.swift */; };
+		1B6C38792B91C2F40066C6A3 /* GateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		1B0506F92B14BC660022BCCE /* Logisim_Element.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Logisim_Element.docc; sourceTree = "<group>"; };
 		1B0506FF2B14BC660022BCCE /* Logisim-ElementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Logisim-ElementTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0507042B14BC660022BCCE /* Logisim_ElementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logisim_ElementTests.swift; sourceTree = "<group>"; };
+		1B6C38742B91C2E70066C6A3 /* ANDGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANDGate.swift; sourceTree = "<group>"; };
+		1B6C38752B91C2E70066C6A3 /* ORGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORGate.swift; sourceTree = "<group>"; };
+		1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		1B0506F72B14BC660022BCCE /* Logisim-Element */ = {
 			isa = PBXGroup;
 			children = (
+				1B6C38742B91C2E70066C6A3 /* ANDGate.swift */,
+				1B6C38752B91C2E70066C6A3 /* ORGate.swift */,
+				1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */,
 				1B0506F82B14BC660022BCCE /* Logisim_Element.h */,
 				1B0506F92B14BC660022BCCE /* Logisim_Element.docc */,
 			);
@@ -194,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6C38792B91C2F40066C6A3 /* GateProtocol.swift in Sources */,
+				1B6C38772B91C2E70066C6A3 /* ORGate.swift in Sources */,
+				1B6C38762B91C2E70066C6A3 /* ANDGate.swift in Sources */,
 				1B0506FA2B14BC660022BCCE /* Logisim_Element.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +422,7 @@
 		1B05070D2B14BC660022BCCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;
@@ -429,6 +442,7 @@
 		1B05070E2B14BC660022BCCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;

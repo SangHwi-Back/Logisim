@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		1B04EBCF2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04EBCE2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift */; };
 		1B04EBD12B6C2A7F00484620 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04EBD02B6C2A7F00484620 /* Collection+Extensions.swift */; };
-		1B04EBDA2B6F95BA00484620 /* GateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04EBD92B6F95BA00484620 /* GateProtocol.swift */; };
 		1B0506D52B1382C40022BCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0506D42B1382C40022BCCE /* AppDelegate.swift */; };
 		1B0506E02B1382C60022BCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506DF2B1382C60022BCCE /* Assets.xcassets */; };
 		1B0506E32B1382C60022BCCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0506E12B1382C60022BCCE /* LaunchScreen.storyboard */; };
 		1B0508292B14CB8A0022BCCE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0508282B14CB8A0022BCCE /* MainViewController.swift */; };
 		1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B253A6F2B2AB81B003873DF /* View+Extensions.swift */; };
-		1B253A872B2AC036003873DF /* ANDGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B253A862B2AC036003873DF /* ANDGate.swift */; };
-		1B253A972B2AC03A003873DF /* ORGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B253A962B2AC03A003873DF /* ORGate.swift */; };
+		1B6C387A2B91C4160066C6A3 /* Logisim_Element.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0508712B14D7E80022BCCE /* Logisim_Element.framework */; };
+		1B6C387B2B91C4160066C6A3 /* Logisim_Element.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0508712B14D7E80022BCCE /* Logisim_Element.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B88DB1E2B6FBA9E00767809 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B88DB1D2B6FBA9E00767809 /* GridView.swift */; };
 		1B89DC312B395CE4000274F2 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC302B395CE4000274F2 /* CircleButton.swift */; };
 		1B89DC412B39679A000274F2 /* MainViewSubMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC402B39679A000274F2 /* MainViewSubMenuView.swift */; };
@@ -132,6 +131,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1B6C387B2B91C4160066C6A3 /* Logisim_Element.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +141,6 @@
 /* Begin PBXFileReference section */
 		1B04EBCE2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSubMenuTableViewCell.swift; sourceTree = "<group>"; };
 		1B04EBD02B6C2A7F00484620 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
-		1B04EBD92B6F95BA00484620 /* GateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateProtocol.swift; sourceTree = "<group>"; };
 		1B0506D12B1382C40022BCCE /* Logisim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logisim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0506D42B1382C40022BCCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B0506DF2B1382C60022BCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,8 +157,6 @@
 		1B05083B2B14D00A0022BCCE /* Logisim.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Logisim.xctestplan; sourceTree = "<group>"; };
 		1B05086B2B14D7E80022BCCE /* Logisim-Element.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Logisim-Element.xcodeproj"; path = "Logisim-Element/Logisim-Element.xcodeproj"; sourceTree = "<group>"; };
 		1B253A6F2B2AB81B003873DF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
-		1B253A862B2AC036003873DF /* ANDGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANDGate.swift; sourceTree = "<group>"; };
-		1B253A962B2AC03A003873DF /* ORGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORGate.swift; sourceTree = "<group>"; };
 		1B88DB1D2B6FBA9E00767809 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		1B89DC302B395CE4000274F2 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		1B89DC402B39679A000274F2 /* MainViewSubMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSubMenuView.swift; sourceTree = "<group>"; };
@@ -172,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6C387A2B91C4160066C6A3 /* Logisim_Element.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,13 +208,10 @@
 			children = (
 				1B0506EA2B14209F0022BCCE /* README.md */,
 				1B05083C2B14D01B0022BCCE /* Resources */,
-				1B0508282B14CB8A0022BCCE /* MainViewController.swift */,
 				1B04EBBF2B6C20FA00484620 /* AddItem */,
+				1B0508282B14CB8A0022BCCE /* MainViewController.swift */,
 				1B89DC302B395CE4000274F2 /* CircleButton.swift */,
-				1B253A862B2AC036003873DF /* ANDGate.swift */,
 				1B88DB1D2B6FBA9E00767809 /* GridView.swift */,
-				1B04EBD92B6F95BA00484620 /* GateProtocol.swift */,
-				1B253A962B2AC03A003873DF /* ORGate.swift */,
 				1B253A6F2B2AB81B003873DF /* View+Extensions.swift */,
 				1B04EBD02B6C2A7F00484620 /* Collection+Extensions.swift */,
 				1B89DC422B3967FF000274F2 /* CALayer+Extensions.swift */,
@@ -515,11 +510,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B253A872B2AC036003873DF /* ANDGate.swift in Sources */,
-				1B253A972B2AC03A003873DF /* ORGate.swift in Sources */,
 				1B0508292B14CB8A0022BCCE /* MainViewController.swift in Sources */,
 				1B04EBD12B6C2A7F00484620 /* Collection+Extensions.swift in Sources */,
-				1B04EBDA2B6F95BA00484620 /* GateProtocol.swift in Sources */,
 				1B89DC312B395CE4000274F2 /* CircleButton.swift in Sources */,
 				1B88DB1E2B6FBA9E00767809 /* GridView.swift in Sources */,
 				1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */,

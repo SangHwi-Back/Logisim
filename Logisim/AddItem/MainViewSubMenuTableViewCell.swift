@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Logisim_Element
 
 class MainViewSubMenuTableViewCell: UITableViewCell {
     private let thumbnail = UIView()

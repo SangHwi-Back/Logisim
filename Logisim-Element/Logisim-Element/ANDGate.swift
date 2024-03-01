@@ -7,10 +7,10 @@
 
 import UIKit
 
-class ANDGate: UIView, GateProtocol {
-    internal var gateViewFrame: CGRect?
+public class ANDGate: UIView, GateProtocol {
+    public var gateViewFrame: CGRect?
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.gateViewFrame = frame
         backgroundColor = .clear
@@ -20,7 +20,7 @@ class ANDGate: UIView, GateProtocol {
         super.init(coder: coder)
     }
     
-    override func draw(_ rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         let origin = CGPoint(x: (rect.width / 2) - (rect.width * 0.4), y: (rect.height / 2) - (rect.height * 0.275))
         

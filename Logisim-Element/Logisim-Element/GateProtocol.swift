@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GateProtocol {
+public protocol GateProtocol {
     var gateViewFrame: CGRect? { get }
 }
 

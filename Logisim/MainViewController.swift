@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Logisim_Element
 
 class MainViewController: UIViewController {
     private let gateSize = CGSize(width: 100, height: 100)
