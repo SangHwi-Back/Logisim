@@ -16,6 +16,11 @@
 		1B6C38792B91C2F40066C6A3 /* GateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */; };
 		1B6C387D2B91C5CB0066C6A3 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */; };
 		1B6C38812B91E9800066C6A3 /* CommonGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38802B91E9800066C6A3 /* CommonGate.swift */; };
+		A5F8AD2B2BB23B7F004ADAA2 /* GateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD2A2BB23B7F004ADAA2 /* GateInput.swift */; };
+		A5F8AD2D2BB23BC6004ADAA2 /* LogicCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD2C2BB23BC6004ADAA2 /* LogicCalculation.swift */; };
+		A5F8AD322BB23CFE004ADAA2 /* Logisim_LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD312BB23CFE004ADAA2 /* Logisim_LogicTests.swift */; };
+		A5F8AD332BB23D1F004ADAA2 /* LogicCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD2C2BB23BC6004ADAA2 /* LogicCalculation.swift */; };
+		A5F8AD342BB23D21004ADAA2 /* GateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD2A2BB23B7F004ADAA2 /* GateInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,9 @@
 		1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateProtocol.swift; sourceTree = "<group>"; };
 		1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		1B6C38802B91E9800066C6A3 /* CommonGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGate.swift; sourceTree = "<group>"; };
+		A5F8AD2A2BB23B7F004ADAA2 /* GateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateInput.swift; sourceTree = "<group>"; };
+		A5F8AD2C2BB23BC6004ADAA2 /* LogicCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicCalculation.swift; sourceTree = "<group>"; };
+		A5F8AD312BB23CFE004ADAA2 /* Logisim_LogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logisim_LogicTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,8 @@
 				1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */,
 				1B0506F82B14BC660022BCCE /* Logisim_Element.h */,
 				1B0506F92B14BC660022BCCE /* Logisim_Element.docc */,
+				A5F8AD2A2BB23B7F004ADAA2 /* GateInput.swift */,
+				A5F8AD2C2BB23BC6004ADAA2 /* LogicCalculation.swift */,
 			);
 			path = "Logisim-Element";
 			sourceTree = "<group>";
@@ -96,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0507042B14BC660022BCCE /* Logisim_ElementTests.swift */,
+				A5F8AD312BB23CFE004ADAA2 /* Logisim_LogicTests.swift */,
 			);
 			path = "Logisim-ElementTests";
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 					};
 					1B0506FE2B14BC660022BCCE = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -215,6 +227,8 @@
 				1B6C38812B91E9800066C6A3 /* CommonGate.swift in Sources */,
 				1B6C38762B91C2E70066C6A3 /* ANDGate.swift in Sources */,
 				1B0506FA2B14BC660022BCCE /* Logisim_Element.docc in Sources */,
+				A5F8AD2D2BB23BC6004ADAA2 /* LogicCalculation.swift in Sources */,
+				A5F8AD2B2BB23B7F004ADAA2 /* GateInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B0507052B14BC660022BCCE /* Logisim_ElementTests.swift in Sources */,
+				A5F8AD322BB23CFE004ADAA2 /* Logisim_LogicTests.swift in Sources */,
+				A5F8AD332BB23D1F004ADAA2 /* LogicCalculation.swift in Sources */,
+				A5F8AD342BB23D21004ADAA2 /* GateInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;
@@ -442,6 +460,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -451,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3ZPWB4HNK;
@@ -462,6 +483,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
