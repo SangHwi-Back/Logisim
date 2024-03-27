@@ -16,6 +16,7 @@
 		1B6C38792B91C2F40066C6A3 /* GateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */; };
 		1B6C387D2B91C5CB0066C6A3 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */; };
 		1B6C38812B91E9800066C6A3 /* CommonGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6C38802B91E9800066C6A3 /* CommonGate.swift */; };
+		A555EE0A2BB44B0800529F92 /* BlinkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555EE092BB44B0800529F92 /* BlinkingModel.swift */; };
 		A5F8AD2B2BB23B7F004ADAA2 /* GateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD2A2BB23B7F004ADAA2 /* GateInput.swift */; };
 		A5F8AD2D2BB23BC6004ADAA2 /* LogicCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD2C2BB23BC6004ADAA2 /* LogicCalculation.swift */; };
 		A5F8AD322BB23CFE004ADAA2 /* Logisim_LogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F8AD312BB23CFE004ADAA2 /* Logisim_LogicTests.swift */; };
@@ -44,6 +45,7 @@
 		1B6C38782B91C2F40066C6A3 /* GateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateProtocol.swift; sourceTree = "<group>"; };
 		1B6C387C2B91C5CB0066C6A3 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		1B6C38802B91E9800066C6A3 /* CommonGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGate.swift; sourceTree = "<group>"; };
+		A555EE092BB44B0800529F92 /* BlinkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingModel.swift; sourceTree = "<group>"; };
 		A5F8AD2A2BB23B7F004ADAA2 /* GateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateInput.swift; sourceTree = "<group>"; };
 		A5F8AD2C2BB23BC6004ADAA2 /* LogicCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicCalculation.swift; sourceTree = "<group>"; };
 		A5F8AD312BB23CFE004ADAA2 /* Logisim_LogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logisim_LogicTests.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				1B0506F92B14BC660022BCCE /* Logisim_Element.docc */,
 				A5F8AD2A2BB23B7F004ADAA2 /* GateInput.swift */,
 				A5F8AD2C2BB23BC6004ADAA2 /* LogicCalculation.swift */,
+				A555EE092BB44B0800529F92 /* BlinkingModel.swift */,
 			);
 			path = "Logisim-Element";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A555EE0A2BB44B0800529F92 /* BlinkingModel.swift in Sources */,
 				1B6C38792B91C2F40066C6A3 /* GateProtocol.swift in Sources */,
 				1B6C387D2B91C5CB0066C6A3 /* UIKit+Extensions.swift in Sources */,
 				1B6C38772B91C2E70066C6A3 /* ORGate.swift in Sources */,
