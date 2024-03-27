@@ -41,15 +41,22 @@ class MainViewSubMenuTableViewCell: UITableViewCell {
         self.model = model
         self.label.text = model.name
         
-        if thumbnail.subviews.isEmpty, case .gate(let gateType) = model.category {
-            let gate: UIView
-            switch gateType {
-            case .OR: gate = ORGate()
-            case .AND: gate = ANDGate()
+        if thumbnail.subviews.isEmpty {
+            switch model.category {
+            case .gate(let gateType):
+                let gate: UIView
+                switch gateType {
+                case .OR: gate = ORGate()
+                case .AND: gate = ANDGate()
+                }
+                
+                gate.backgroundColor = .clear
+                thumbnail.addEqualEdgesSubview(gate)
+            case .generator:
+                let generator = PowerGenerator()
+                generator.switchBlinking(false)
+                thumbnail.addEqualEdgesSubview(generator)
             }
-            
-            gate.backgroundColor = .clear
-            thumbnail.addEqualEdgesSubview(gate)
         }
     }
     

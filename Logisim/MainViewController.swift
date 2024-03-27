@@ -47,6 +47,13 @@ class MainViewController: UIViewController {
         mainViewSubMenuView.isHidden = true
         
         mainViewSubMenuView.menus = [
+            .init(category: .generator, name: "GEN", handler: { [weak self] in
+                let generator = PowerGenerator()
+                generator.frame.origin = CGPoint(x: 20, y: 20)
+                generator.addGesture()
+                generator.switchBlinking(true)
+                self?.view.addSubview(generator)
+            }),
             .init(category: .gate(.OR), name: "OR", handler: { [weak self] in
                 self?.addGate(ANDGate(
                     origin: self?.insetLastGate ?? .zero,

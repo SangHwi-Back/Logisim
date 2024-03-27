@@ -12,11 +12,13 @@ enum CategoryMainViewItem: Hashable {
     case OR, AND
     }
     
+    case generator
     case gate(GateType)
     
     var sectionNumber: Int {
         switch self {
-        case .gate(_): return 0
+        case .generator: return 0
+        case .gate(_): return 1
         }
     }
 }

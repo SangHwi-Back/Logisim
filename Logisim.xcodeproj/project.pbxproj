@@ -21,6 +21,7 @@
 		1B89DC412B39679A000274F2 /* MainViewSubMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC402B39679A000274F2 /* MainViewSubMenuView.swift */; };
 		1B89DC432B3967FF000274F2 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC422B3967FF000274F2 /* CALayer+Extensions.swift */; };
 		1B89DC452B396A76000274F2 /* MainViewSubMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B89DC442B396A76000274F2 /* MainViewSubMenuModel.swift */; };
+		A555EDFA2BB3B30B00529F92 /* PowerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555EDF92BB3B30B00529F92 /* PowerGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		1B89DC402B39679A000274F2 /* MainViewSubMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSubMenuView.swift; sourceTree = "<group>"; };
 		1B89DC422B3967FF000274F2 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 		1B89DC442B396A76000274F2 /* MainViewSubMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSubMenuModel.swift; sourceTree = "<group>"; };
+		A555EDF92BB3B30B00529F92 /* PowerGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				1B05083C2B14D01B0022BCCE /* Resources */,
 				1B04EBBF2B6C20FA00484620 /* AddItem */,
 				1B0508282B14CB8A0022BCCE /* MainViewController.swift */,
+				A555EDF92BB3B30B00529F92 /* PowerGenerator.swift */,
 				1B89DC302B395CE4000274F2 /* CircleButton.swift */,
 				1B88DB1D2B6FBA9E00767809 /* GridView.swift */,
 				1B253A6F2B2AB81B003873DF /* View+Extensions.swift */,
@@ -514,6 +517,7 @@
 				1B04EBD12B6C2A7F00484620 /* Collection+Extensions.swift in Sources */,
 				1B89DC312B395CE4000274F2 /* CircleButton.swift in Sources */,
 				1B88DB1E2B6FBA9E00767809 /* GridView.swift in Sources */,
+				A555EDFA2BB3B30B00529F92 /* PowerGenerator.swift in Sources */,
 				1B253A702B2AB81B003873DF /* View+Extensions.swift in Sources */,
 				1B04EBCF2B6C21A600484620 /* MainViewSubMenuTableViewCell.swift in Sources */,
 				1B89DC412B39679A000274F2 /* MainViewSubMenuView.swift in Sources */,
